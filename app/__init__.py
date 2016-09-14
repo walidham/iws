@@ -26,7 +26,7 @@ def not_found(error):
 # Import a module / component using its blueprint handler variable (mod_auth)
 #from app.mod_auth.controllers import mod_auth as auth_module
 import app.admin.admin as admin_panel
-import app.feature_req.feature as feature
+import app.feature_req.feature_req as feature_req
 
 
 # Register blueprint(s)

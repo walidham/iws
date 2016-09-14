@@ -23,6 +23,7 @@ function ClientListViewModel() {
 	var t = $.map(clientModels.clients, function(item) {
 	    return new Client(item);
 	});
+	
 	self.clients(t);
     });
 

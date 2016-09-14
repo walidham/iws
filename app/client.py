@@ -1,14 +1,15 @@
-# Import the database object (db) from the main application module
-# We will define this inside /app/__init__.py in the next sections.
 from sqlalchemy import Column, Integer, String
 from app.database import Base
+from sqlalchemy.orm import sessionmaker, relationship
 
-# Define a User model
+# Define a Client model
 class Client(Base):
 
     __tablename__ = 'client'
+
     #id primary key
     id = Column(Integer, primary_key=True)
+
     # Company Name
     company_name    = Column(String(128),  nullable=False)
 
@@ -18,6 +19,10 @@ class Client(Base):
     
     # Company Description
     description    = Column(String(1000),  nullable=True)
+    
+    #Define the relationship between client and feature
+    features = relationship("Feature",back_populates="client")
+
 
     # New instance instantiation procedure
     def __init__(self, company_name, email, description):
