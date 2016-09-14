@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Admin Panel- New Client{% endblock %}
+{% block head %}
+    {{ super() }}
+    
+{% endblock %}
+
+{% block sidebar %}
+	<div class="col-sm-3 col-md-2 sidebar">
+		<ul class="nav nav-sidebar">
+			<li><a href="#">Features Requests</a></li>
+			<li class="active"><a href="#">Clients <span class="sr-only">(current)</span></a></li>
+			<li ><a href="#">Products </a></li>
+			<li ><a href="#">Users </a></li>
+
+		</ul>
+
+	</div>
+{% endblock %}
+
+{% block contentTitle %}Client properties{% endblock %}
+{% block contentSubTitle %}
+
+
+{% endblock %}
+
+{% block content %}
+    
+	<form>
+              <div class="form-group">
+                  <label for="companyNameText">Company Name</label>
+                  <input type="text" class="form-control" id="companyNameText" aria-describedby="companyNameHelp" placeholder="Enter company name">
+                  <small id="companyNameHelp" class="form-text text-muted">Enter the name of company.</small>
+              </div>
+               <div class="form-group">
+                  <label for="descriptionText">Description</label>
+                  <textarea class="form-control" id="descriptionText" rows="3"></textarea>
+              </div>
+              
+              
+              <div class="form-group">
+                  <label for="prioritySelect">Priority</label>
+                  <select class="form-control" id="prioritySelect">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                  </select>
+              </div>
+             
+              <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+{% endblock %}

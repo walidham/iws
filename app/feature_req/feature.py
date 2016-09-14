@@ -5,7 +5,7 @@ from flask import request, render_template, \
 
 
 # Import the database object from the main app module
-from app import db
+from app import db_session as db
 
 from app import app
 

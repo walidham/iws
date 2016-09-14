@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Admin Panel{% endblock %}
+{% block head %}
+    {{ super() }}
+    
+{% endblock %}
+
+{% block sidebar %}
+	<div class="col-sm-3 col-md-2 sidebar">
+		<ul class="nav nav-sidebar">
+			<li><a href="#">Features Requests</a></li>
+			<li class="active"><a href="#">Clients <span class="sr-only">(current)</span></a></li>
+			<li ><a href="#">Products </a></li>
+			<li ><a href="#">Users </a></li>
+
+		</ul>
+
+	</div>
+{% endblock %}
+
+{% block contentTitle %}Client List{% endblock %}
+{% block contentSubTitle %}
+<a href="/new_client/" class="btn btn-primary">Add new client</a>
+
+{% endblock %}
+
+{% block content %}
+    
+	<div class="table-responsive">
+		<table class="table table-striped table-inverse">
+		  <thead>
+			  <tr>
+				  <th>#</th>
+				  <th>Full Name</th>
+				  <th>Email</th>
+				  <th>Role</th>
+				  <th>Action</th>
+				  
+			  </tr>
+		  </thead>
+		  <tbody>
+			  <tr>
+				  <th scope="row">1</th>
+				  <td>Mark</td>
+				  <td>Otto</td>
+				  <td>@mdo</td>
+				  <td>Mark</td>
+				  			  </tr>
+			  <tr>
+				  <th scope="row">2</th>
+				  <td>Jacob</td>
+				  <td>Thornton</td>
+				  <td>@fat</td>
+				  <td>Mark</td>
+				 
+			  </tr>
+			  <tr>
+				  <th scope="row">3</th>
+				  <td>Larry</td>
+				  <td>the Bird</td>
+				  <td>@twitter</td>
+				  <td>Mark</td>
+				  
+			  </tr>
+		  </tbody>
+	  </table>
+  </div>
+{% endblock %}
